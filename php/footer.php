@@ -61,7 +61,7 @@
             <h3>THÔNG TIN WEBSITE</h3>
             <?php
                 $address = "Tầng 3, Tòa nhà số HA9 - 218 Lĩnh Nam , Hoàng Mai , Hà Nội";
-                $phone = "0393286372";
+                $phone = "0977754663";
                 $email = "contact@sm4s.vn";
             ?>
             <div class="icon">
@@ -81,7 +81,7 @@
             <h3>SINH VIÊN THỰC HIỆN</h3>
             <ul>
                 <li><i class="iconn bi bi-person-fill"></i> Đinh Thế Tú</li>
-                <li><i class="iconn bi bi-person-fill"></i> Nguyễn Thanh Tùng</li>
+                
             </ul>
         </div>
 
@@ -89,7 +89,7 @@
             <h3>MÃ SỐ SINH VIÊN</h3>
             <ul>
                 <li><i class="iconn bi bi-calendar-event"></i>2121051396</li>
-                <li><i class="iconn bi bi-calendar-event"></i>2121051447</li>
+               
             </ul>
         </div>
         

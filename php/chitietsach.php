@@ -344,7 +344,7 @@
         </div>
     </div>
     <div class="product-details">
-        <h2>Thông tin chi tiết</h2>
+        <h2>Mô tả</h2>
         <p class="short-description">
             <?php echo nl2br(htmlspecialchars($product['MoTa'])); ?>
         </p>       

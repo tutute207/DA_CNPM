@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -17,7 +18,6 @@
 
         .wrapper {
             height: 100%;
-            
             position: fixed;
             top: 0;
             left: 0;
@@ -190,19 +190,31 @@
         <nav id="sidebar">
             <div class="title">Danh Mục</div>
             <ul class="list-items">
+                <?php
+                if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+                    }
+                $logged_in = isset($_SESSION['username']);
+                ?>
                 <li><a href="trangchu.php"><i class="fas fa-home"></i>Trang chủ</a></li>
                 <li><a href="sach1.php"><i class="fas fa-info-circle"></i>Tất cả sách</a></li>
-                <li><a href="lienhe.php"><i class="fas fa-briefcase"></i>Liên hệ</a></li>
-                <li><a href="login.php"><i class="fas fa-cogs"></i>Đăng nhập</a></li>
-                <li><a href="dangky.php"><i class="fas fa-envelope"></i>Đăng ký</a></li>
-         
+                <?php if ($logged_in): ?>
+                    <li><a href="nguoidung.php"><i class="fas fa-user"></i>Thông tin cá nhân</a></li>
+                <?php endif; ?>
+                <?php if (!$logged_in): ?>
+                    <li><a href="login.php"><i class="fas fa-cogs"></i>Đăng nhập</a></li>
+                    <li><a href="dangky.php"><i class="fas fa-envelope"></i>Đăng ký</a></li>
+                <?php else: ?>
+                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+                <?php endif; ?>
+                
+          
             <div class="icons">
                 <a href="https://www.facebook.com/bianka207"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/giai_minh/"><i class="fab fa-instagram"></i></a>
                 <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fas fa-envelope"></i></a>
             </div>
-          
-        </ul>
+                </ul>
         </nav>
     </div>
 </body>
